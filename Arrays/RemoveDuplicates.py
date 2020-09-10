@@ -1,0 +1,19 @@
+"""
+Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
+
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+
+Author: Juliet George
+Date: 9/5/2020
+"""
+
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        Returns a modified list after duplicates have been removed.
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums[:] = sorted(set(nums))
+        return len(nums)
